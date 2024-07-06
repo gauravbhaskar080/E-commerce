@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://flippy-store.onrender.com';

@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { BASE_URL } from '../api.js';
 
-export const url = 'http://localhost:8000';
+export const url = `${BASE_URL}`;
 
 export const authenticateLogin = async (user) => {
     try {
