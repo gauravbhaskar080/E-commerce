@@ -9,7 +9,7 @@ import { addToCart } from "../../../redux/actions/cartActions";
 import { useDispatch } from "react-redux";
 
 import axios from "axios";
-import { url } from "../../../service/api";
+// import { url } from "../../../service/api";
 
 const LeftContainer = styled(Box)(({ theme }) => ({
   minWidth: "40%",
@@ -46,7 +46,7 @@ const ActionItem = ({ product }) => {
 
   const handleCheckout = () => {
     axios
-      .post(`${url}/stripe/create-checkout-session`, {
+      .post(`https://flippy-store.vercel.app/stripe/create-checkout-session`, {
         cartItems: [{ ...product, quantity: 1 }], // Modify to send product as cartItems
       })
       .then((response) => {
